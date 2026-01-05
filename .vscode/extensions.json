@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "eamodio.gitlens",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "yoavbls.pretty-ts-errors",
+    "vitest.explorer",
+    "editorconfig.editorconfig",
+    "christian-kohler.path-intellisense",
+    "mikestead.dotenv",
+    "pflannery.vscode-versionlens",
+    "gruntfuggly.todo-tree",
+    "wix.vscode-import-cost",
+    "aaron-bond.better-comments",
+    "formulahendry.auto-rename-tag"
+  ],
+  "unwantedRecommendations": []
+}

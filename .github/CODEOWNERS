@@ -1,0 +1,27 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence, they will
+# be requested for review when someone opens a pull request.
+* @lrrsh
+
+# TypeScript/JavaScript files
+*.ts @lrrsh
+*.tsx @lrrsh
+*.js @lrrsh
+*.jsx @lrrsh
+
+# Configuration files
+*.json @lrrsh
+*.yml @lrrsh
+*.yaml @lrrsh
+
+# Documentation
+*.md @lrrsh
+/docs/ @lrrsh
+
+# GitHub specific files
+/.github/ @lrrsh
+
+# Build and CI
+/tsconfig*.json @lrrsh
+/package.json @lrrsh
+/.github/workflows/ @lrrsh

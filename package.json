@@ -1,0 +1,100 @@
+{
+  "name": "typescript-project-template",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript project template with modern tooling",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yaml,yml}\"",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky",
+    "release": "semantic-release",
+    "clean": "rimraf dist coverage .turbo node_modules/.cache",
+    "precommit": "lint-staged",
+    "docs": "typedoc --out docs src/index.ts",
+    "tool:header": "node tools/header.js",
+    "validate": "npm run typecheck && npm run lint && npm run test:run"
+  },
+  "keywords": [
+    "typescript",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Lexi Rose Rogers <lexi@lrr.sh>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrrsh/typescript-project-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lrrsh/typescript-project-template/issues"
+  },
+  "homepage": "https://github.com/lrrsh/typescript-project-template#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@eslint/js": "^9.39.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitest/coverage-v8": "^1.2.0",
+    "@vitest/ui": "^1.2.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.0",
+    "eslint-plugin-unicorn": "^50.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.0",
+    "rimraf": "^5.0.5",
+    "semantic-release": "^23.0.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.3.0",
+    "typescript-eslint": "^8.51.0",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "zod": "^3.22.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  }
+}
